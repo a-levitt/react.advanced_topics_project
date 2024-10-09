@@ -1,5 +1,21 @@
+import {useState} from "react";
+
 const ErrorExample = () => {
-  return <h2>useState error example</h2>;
+
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  }
+
+  return <div>
+    <h2>{count}</h2>
+    <button
+        className='btn'
+        type="button"
+        onClick={handleClick}>Count++</button>
+  </div>;
 };
+
 
 export default ErrorExample;
